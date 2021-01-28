@@ -11,16 +11,16 @@ function preload() {
 }
 
 function setup() {
-	createCanvas(1200, 400);
+	createCanvas(1200, 450);
 
 	engine = Engine.create();
 	world = engine.world;
 
 	paper= new Paper(100,375,70)	
 	
-    box1 = new Box(810,365);
+    box1 = new Box(1010,415);
 	
-	ground = new Ground(600,380,1200,20);
+	ground = new Ground(600,430,1200,20);
    
 	Matter.Engine.run(engine)
 }
@@ -42,7 +42,7 @@ function keyPressed() {
 
 if (keyCode === UP_ARROW){
 
-	Matter.Body.applyForce(paper.body,paper.body.position,{x: 115, y:-120});
+	Matter.Body.applyForce(paper.body,paper.body.position,{x: 135, y:-135});
 
 }
 }
